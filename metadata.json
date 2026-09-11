@@ -1,0 +1,6 @@
+{
+  "name": "Context Studio",
+  "description": "Universal AI Workspace where context is the primary asset across multiple AI models.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

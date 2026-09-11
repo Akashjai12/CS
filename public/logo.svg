@@ -1,0 +1,156 @@
+<svg viewBox="0 0 256 256" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Top-Right Violet to Royal Blue Gradient -->
+    <linearGradient id="copilot-purple" x1="120" y1="20" x2="230" y2="85" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#2563EB" />
+      <stop offset="35%" stopColor="#4F46E5" />
+      <stop offset="65%" stopColor="#7C3AED" />
+      <stop offset="85%" stopColor="#9333EA" />
+      <stop offset="100%" stopColor="#8B5CF6" />
+    </linearGradient>
+
+    <!-- Top Rim Specular Sheen -->
+    <linearGradient id="copilot-top-sheen" x1="128" y1="20" x2="220" y2="65" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#BAE6FD" stopOpacity="0.8" />
+      <stop offset="50%" stopColor="#DDD6FE" stopOpacity="0.6" />
+      <stop offset="100%" stopColor="#F3E8FF" stopOpacity="0.2" />
+    </linearGradient>
+
+    <!-- Front Left Ribbon Loop (Vibrant Cyan to Electric Azure) -->
+    <linearGradient id="copilot-cyan-loop" x1="24" y1="58" x2="108" y2="188" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#38BDF8" />
+      <stop offset="25%" stopColor="#0EA5E9" />
+      <stop offset="55%" stopColor="#0284C7" />
+      <stop offset="80%" stopColor="#2563EB" />
+      <stop offset="100%" stopColor="#1D4ED8" />
+    </linearGradient>
+
+    <!-- Left Outer Specular Highlight (Rim Light) -->
+    <linearGradient id="copilot-left-rim" x1="22" y1="64" x2="52" y2="152" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.8" />
+      <stop offset="45%" stopColor="#BAE6FD" stopOpacity="0.45" />
+      <stop offset="100%" stopColor="#38BDF8" stopOpacity="0" />
+    </linearGradient>
+
+    <!-- Deep Ambient Occlusion / Inner Fold Shadow -->
+    <linearGradient id="copilot-inner-shadow" x1="68" y1="126" x2="116" y2="178" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0F172A" stopOpacity="0.85" />
+      <stop offset="40%" stopColor="#1E3A8A" stopOpacity="0.95" />
+      <stop offset="100%" stopColor="#1D4ED8" stopOpacity="1" />
+    </linearGradient>
+
+    <!-- Upper Inner Downward Shadow -->
+    <linearGradient id="copilot-upper-inner-shadow" x1="168" y1="52" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#4338CA" stopOpacity="0.85" />
+      <stop offset="50%" stopColor="#1E3A8A" stopOpacity="0.95" />
+      <stop offset="100%" stopColor="#172554" stopOpacity="1" />
+    </linearGradient>
+
+    <!-- Bottom Sweeping Arm (Deep Blue around base to Electric Cyan Tip) -->
+    <linearGradient id="copilot-bottom-arm" x1="72" y1="192" x2="230" y2="192" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#1D4ED8" />
+      <stop offset="30%" stopColor="#2563EB" />
+      <stop offset="65%" stopColor="#3B82F6" />
+      <stop offset="85%" stopColor="#60A5FA" />
+      <stop offset="100%" stopColor="#38BDF8" />
+    </linearGradient>
+
+    <!-- Top Cap Radial Highlight -->
+    <radialGradient id="copilot-top-cap" cx="218" cy="84" r="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#C084FC" />
+      <stop offset="55%" stopColor="#9333EA" />
+      <stop offset="100%" stopColor="#7C3AED" />
+    </radialGradient>
+
+    <!-- Bottom Cap Radial Highlight -->
+    <radialGradient id="copilot-bottom-cap" cx="218" cy="172" r="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#38BDF8" />
+      <stop offset="55%" stopColor="#3B82F6" />
+      <stop offset="100%" stopColor="#2563EB" />
+    </radialGradient>
+
+    <!-- 3D Elevation Drop Shadow -->
+    <filter id="copilot-elevation" x="-12%" y="-12%" width="130%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" floodColor="#1D4ED8" floodOpacity="0.22" />
+      <feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#0F172A" floodOpacity="0.12" />
+    </filter>
+  </defs>
+
+  <g filter="url(#copilot-elevation)">
+    <!-- 1. UNDER-LAYER: Inner Fold Depth (Dark Sapphire Ambient Shadow) -->
+    <path
+      d="M130 52 L102 90 C92 104 90 120 94 136 L112 174 C116 182 122 188 130 192 L134 194 C118 192 104 184 94 172 L80 152 C74 144 72 132 74 122 C78 104 86 90 98 76 L130 52 Z"
+      fill="url(#copilot-inner-shadow)"
+    />
+
+    <!-- 2. TOP ARM: Violet/Purple sweeping across top-right to peak and turning left -->
+    <path
+      d="M128 20 C144 20 196 46 216 64 C224 71 224 81 220 88 C216 96 208 100 200 100 C194 100 188 98 180 92 C164 80 144 68 128 60 C110 52 92 58 76 68 L54 46 C74 30 102 20 128 20 Z"
+      fill="url(#copilot-purple)"
+    />
+
+    <!-- Top Arm Rounded Pill Cap -->
+    <path
+      d="M200 100 C212 100 221 92 221 82 C221 73 214 65 205 64 L216 64 C224 72 224 82 220 88 C216 96 208 100 200 100 Z"
+      fill="url(#copilot-top-cap)"
+    />
+
+    <!-- Top Arm Upper Sheen -->
+    <path
+      d="M128 22 C144 22 186 42 214 64 C210 62 178 44 140 30 C118 24 94 32 74 44 L68 38 C88 28 110 22 128 22 Z"
+      fill="url(#copilot-top-sheen)"
+      opacity="0.85"
+    />
+
+    <!-- 3. INNER UPPER BEVEL (Depth connecting top arm to central hexagon) -->
+    <path
+      d="M128 60 C144 68 164 80 180 92 C168 102 150 114 134 124 C128 128 122 128 118 124 L98 102 C108 88 118 74 128 60 Z"
+      fill="url(#copilot-upper-inner-shadow)"
+      opacity="0.9"
+    />
+
+    <!-- 4. BOTTOM ARM: Royal blue curving around base to electric cyan prong -->
+    <path
+      d="M82 166 C94 186 110 214 130 236 C146 236 196 210 216 192 C224 185 224 175 220 168 C216 160 208 156 200 156 C194 156 188 158 180 164 C164 176 144 188 128 196 C112 204 98 198 90 188 L82 166 Z"
+      fill="url(#copilot-bottom-arm)"
+    />
+
+    <!-- Bottom Arm Rounded Pill Cap -->
+    <path
+      d="M200 156 C212 156 221 164 221 174 C221 183 214 191 205 192 L216 192 C224 184 224 174 220 168 C216 160 208 156 200 156 Z"
+      fill="url(#copilot-bottom-cap)"
+    />
+
+    <!-- 5. FRONT LEFT 3D LOOP: Curving ribbon with cyan-to-azure volumetric fold -->
+    <path
+      d="M54 46 C40 60 28 84 24 112 C20 136 24 160 36 180 C48 200 64 212 82 218 L92 188 C80 184 68 174 60 160 C50 144 48 126 50 108 C52 88 62 70 76 58 L54 46 Z"
+      fill="url(#copilot-cyan-loop)"
+    />
+
+    <!-- Connecting Front Fold to Inner Hexagon Face -->
+    <path
+      d="M76 58 C62 70 52 88 50 108 C48 126 50 144 60 160 C68 174 80 184 92 188 C100 180 108 166 112 150 C116 134 114 118 106 104 L100 102 L76 58 Z"
+      fill="url(#copilot-cyan-loop)"
+    />
+
+    <!-- Front Left Edge Specular Rim Highlight -->
+    <path
+      d="M54 46 C40 60 28 84 24 112 C21 134 24 156 34 174 C32 160 30 140 32 120 C34 96 44 74 58 56 L54 46 Z"
+      fill="url(#copilot-left-rim)"
+    />
+
+    <!-- Subtle Inner Hexagonal Rim Reflection -->
+    <path
+      d="M100 102 C108 114 112 128 110 142 C108 154 102 166 94 174 C96 164 98 152 96 140 C94 128 90 118 84 110 L100 102 Z"
+      fill="#60A5FA"
+      opacity="0.45"
+    />
+
+    <!-- Ambient Core Edge Shadow -->
+    <path
+      d="M134 124 L180 92 C176 96 170 102 162 108 L134 128 C128 132 120 132 116 128 L108 120 L118 124 C122 128 128 128 134 124 Z"
+      fill="#1E293B"
+      opacity="0.3"
+    />
+  </g>
+</svg>
