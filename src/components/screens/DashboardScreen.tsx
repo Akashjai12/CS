@@ -4,6 +4,7 @@ import { INITIAL_PROJECTS } from '../../data/mockData';
 import { BarChart, Grid, Bar, BarXAxis, ChartTooltip } from '../charts/BarChart';
 import { ThroughputAreaChart, ModelBenchmarkChart, ContextCacheRadarChart } from '../charts/AdditionalGraphs';
 import { ModelLogo } from '../ModelLogo';
+import { ContextLogo } from '../ContextLogo';
 
 interface DashboardScreenProps {
   onNavigate: (screen: ScreenId) => void;
@@ -39,6 +40,7 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 text-xs font-medium text-on-surface-variant mb-1">
+            <ContextLogo size={16} />
             <span>Production Workspace</span>
             <span>/</span>
             <span>Overview</span>

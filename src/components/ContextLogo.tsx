@@ -7,20 +7,20 @@ interface ContextLogoProps {
 }
 
 export const ContextLogo: React.FC<ContextLogoProps> = ({ 
-  className = "w-8 h-8", 
+  className = "", 
   size,
   showText = false 
 }) => {
   const dimension = size ? `${size}px` : undefined;
 
   return (
-    <div className={`inline-flex items-center gap-2.5 ${showText ? '' : 'justify-center'}`}>
+    <div className={`inline-flex items-center gap-2.5 shrink-0 ${showText ? '' : 'justify-center'}`}>
       <img
         src="/logo.svg"
-        alt="Brand Logo"
+        alt="Context Studio Logo"
         referrerPolicy="no-referrer"
-        className={`object-contain select-none shrink-0 ${className}`}
-        style={dimension ? { width: dimension, height: dimension } : undefined}
+        className={`aspect-square object-contain select-none shrink-0 ${size ? '' : 'w-8 h-8'} ${className}`}
+        style={dimension ? { width: dimension, height: dimension, minWidth: dimension, minHeight: dimension } : undefined}
       />
 
       {showText && (

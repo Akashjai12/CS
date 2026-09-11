@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ScreenId, UserProfile } from '../types';
 import { UserProfileDropdown } from './auth/UserProfileDropdown';
+import { ContextLogo } from './ContextLogo';
 
 interface TopHeaderProps {
   onNavigate: (screen: ScreenId) => void;
@@ -28,9 +29,17 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
     .toUpperCase() || 'LJ';
 
   return (
-    <header className="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-6 border-b border-slate-100">
-      {/* Search Bar */}
+    <header className="fixed top-0 left-0 md:left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-4 md:px-6 border-b border-slate-100">
+      {/* Search Bar & Mobile Brand */}
       <div className="flex items-center gap-3 w-80 md:w-96">
+        <div 
+          onClick={() => onNavigate('landing')}
+          className="md:hidden flex items-center gap-2 cursor-pointer shrink-0"
+          title="Context Studio"
+        >
+          <ContextLogo size={28} />
+          <span className="font-bold text-sm text-slate-900 tracking-tight hidden sm:inline">Context</span>
+        </div>
         <div 
           onClick={onOpenQuickSearch}
           className="flex items-center gap-2 w-full bg-surface-container-low px-3.5 py-1.5 rounded-full cursor-pointer hover:bg-surface-container transition-colors border border-outline-variant/30"

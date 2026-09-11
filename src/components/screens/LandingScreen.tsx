@@ -256,11 +256,7 @@ export const LandingScreen: React.FC<LandingScreenProps> = ({
                 className="relative z-10 bg-white border border-slate-100 rounded-2xl p-6 shadow-xl shadow-blue-500/5 text-center flex flex-col items-center w-48 cursor-pointer hover:shadow-2xl transition-all"
               >
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-1">
-                  <img
-                    src={BRAND_ASSETS.hubLogo}
-                    alt="Context Studio"
-                    className="h-12 w-auto object-contain"
-                  />
+                  <ContextLogo size={48} className="drop-shadow-sm" />
                 </div>
                 <div className="text-sm font-bold text-slate-900">
                   Context <span className="text-blue-600">Studio</span>
@@ -433,11 +429,7 @@ export const LandingScreen: React.FC<LandingScreenProps> = ({
                   <div className="space-y-4">
                     {/* App Brand inside mockup */}
                     <div className="flex items-center gap-1.5 px-1 py-1">
-                      <img
-                        src={BRAND_ASSETS.mockupLogo}
-                        alt="Context Studio"
-                        className="w-5 h-5 object-contain"
-                      />
+                      <ContextLogo size={20} />
                       <span className="font-bold text-slate-800 text-[13px]">
                         Context <span className="text-blue-600">Studio</span>
                       </span>
@@ -1031,11 +1023,7 @@ export const LandingScreen: React.FC<LandingScreenProps> = ({
                   onClick={() => onNavigate('dashboard')}
                   className="bg-white border border-slate-200/90 rounded-2xl p-5 shadow-lg flex flex-col items-center text-center w-36 cursor-pointer hover:shadow-xl transition-shadow"
                 >
-                  <img
-                    src={BRAND_ASSETS.bottomLogo}
-                    alt="Context Studio"
-                    className="h-10 w-auto object-contain mb-2"
-                  />
+                  <ContextLogo size={40} className="mb-2 drop-shadow-sm" />
                   <span className="text-[12px] font-bold text-slate-900 leading-tight">
                     Context <span className="text-blue-600">Studio</span>
                   </span>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ProjectItem, ScreenId } from '../../types';
+import { ContextLogo } from '../ContextLogo';
 
 interface ProjectWorkspaceScreenProps {
   project?: ProjectItem;
@@ -163,8 +164,8 @@ export const ProjectWorkspaceScreen: React.FC<ProjectWorkspaceScreenProps> = ({
                     </div>
                   ) : (
                     <div className="flex items-start gap-3 bg-white p-4 rounded-2xl border border-outline-variant/30 max-w-3xl shadow-xs">
-                      <div className="w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center text-xs shrink-0">
-                        <span className="material-symbols-outlined text-[16px]">neurology</span>
+                      <div className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0">
+                        <ContextLogo size={24} />
                       </div>
                       <div className="space-y-3 w-full">
                         <div className="text-xs text-on-surface leading-relaxed">
